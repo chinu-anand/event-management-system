@@ -1,0 +1,6 @@
+body{
+    background:  url(pic1.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 120vh;
+}
