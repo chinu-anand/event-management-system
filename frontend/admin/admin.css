@@ -1,0 +1,99 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: rgba(204, 197, 197, 0.1);
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    font-size: 3rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-weight: 700;
+    background-color: white;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5) ;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 2rem;
+    height: 85vh;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    border: 1px solid grey;
+    width: 50vw;
+    padding: 2rem;
+    height: auto;
+    min-height: 50vh;
+    overflow: auto;
+    background-color: white;
+
+}
+
+.buttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: white;
+
+}
+
+.eventList{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 40vw;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    background-color: white;
+    min-height: 35vh;
+
+}
+
+.eventList > ul{
+    list-style: none;
+    background-color: white;
+
+}
+
+.eventList > ul > li {
+    font-size: 1.25rem;
+    margin: 0.5rem 0 0.5rem 0;
+    background-color: white;
+
+}
+
+.buttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.buttons > button{
+    margin: 0.5rem 0rem 0.5rem 0rem;
+    padding: 1rem;
+    width: 40vw;
+    border: 1px solid #4285F4;
+    color: white;
+    background-color: #4285F4;
+    font-size: 1rem;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
