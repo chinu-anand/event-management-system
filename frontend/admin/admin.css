@@ -3,7 +3,7 @@
     padding: 0;
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    background-color: rgba(204, 197, 197, 0.1);
+    background-color: wheat;
 }
 
 header {
@@ -22,7 +22,7 @@ header {
 .container{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     padding-top: 2rem;
     height: 85vh;
 }
@@ -96,4 +96,13 @@ header {
     font-size: 1rem;
     border-radius: 10px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.bg-image-container {
+    width: 35%;
+}
+.bg-image-container> img{
+    max-width: 500px;
+    height: auto;
+    width: 100%;
 }
