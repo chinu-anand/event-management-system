@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Event Management Page</title>
+</head>
+<body>
+	<header>
+		<h1>Event Management Page</h1>
+	</header>
+
+	<nav>
+		<ul>
+			<li><a href="/">Home</a></li>
+			<li><a href="#">Events</a></li>
+			<li><a href="#">Participants</a></li>
+		</ul>
+	</nav>
+
+	<main>
+
+		<section id="book-event">
+			<h2>Book Event</h2>
+			<form method="post" action="{{ url_for('bookseat') }}">
+				<div class="form-group">
+					<label >Select an event:</label>
+					<select name="event_id" class="form-control">
+						{% for event in events %}
+						<option value="{{ event.id }}">{{ event.name }} - {{ event.show_date }}</option>
+						{% endfor %}
+					</select>
+				</div>
+				<label for="name">Your Name:</label>
+				<input type="text" id="name" name="name" required>
+
+				<label for="email">Your Email:</label>
+				<input type="email" id="email" name="email" required>
+				<label for="part_phone">Your Number:</label>
+				<input type="text" id="part_phone" name="part_phone" required>
+
+				<label for="seats">Number of Seats:</label>
+				<input type="number" id="seats" name="seats" min="1" max="{{ events.capacity}}" required>
+
+				<input type="submit" value="Book Now">
+			</form>
+		</section>
+	</main>
+
+	<footer>
+		<p>&copy; 2023 Event Management System</p>
+	</footer>
+</body>
+</html>

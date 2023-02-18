@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Event Management System</title>
+</head>
+<body>
+	<header>
+		<h1>Event Management System</h1>
+	</header>
+
+	<nav>
+		<ul>
+			<li><a href="#">Home</a></li>
+			<li><a href="#">Events</a></li>
+			<li><a href="#">Participants</a></li>
+		</ul>
+	</nav>
+
+	<main>
+		<section id="event-management">
+			<h2>Event Management</h2>
+			<p>Here you can manage your events and create new ones.</p>
+		</section>
+
+		<section id="create-event">
+			<h2>Create Event</h2>
+			<form method="post" action="{{ url_for('add_event') }}">
+				<label for="name">Event Name:</label>
+				<input type="text" id="name" name="name" required><br>
+
+				<label for="show_date">Date:</label>
+				<input type="date" id="show_date" name="show_date" required><br>
+
+				<label for="place">place:</label>
+				<input type="text" id="place" name="place" required><br>
+
+				<label for="capacity">capacity:</label>
+				<input type="number" id="capacity" name="capacity" required><br>
+
+				<label for="organizer_phone">Organizer phone:</label>
+				<input type="number" id="organizer_phone" name="organizer_phone" required><br>
+
+				<label for="event_desc">Event description:</label>
+				<input type="text" id="event_desc" name="event_desc" required><br>
+
+				<label for="event_type">Event Type:</label>
+				<input type="text" id="event_type" name="event_type" required><br>
+
+				<label for="event_loc">Event Location:</label>
+				<input type="text" id="event_loc" name="event_loc" required><br>
+
+				<label for="event_status">Event Status:</label>
+				<input type="text" id="event_status" name="event_status" required><br>
+
+				<input type="submit" value="Create Event">
+			</form>
+		</section>
+	</main>
+
+	<footer>
+		<p>&copy; 2023 Event Management System</p>
+	</footer>
+</body>
+</html>

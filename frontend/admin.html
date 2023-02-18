@@ -1,7 +1,8 @@
 {% extends "base.html" %} {% block title %}Login{% endblock %} {% block content%}
-   <form action="{{ url_for('login') }}" method="post" class="form-signin">
-      <img class="mb-4" src="C:\Users\chand\Desktop\ABC EVENTS\static\download.png" alt="" width="72" height="72">
+   <form action="{{ url_for('adminlogin') }}" method="post" class="form-signin">
+      <img class="mb-4" src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
       <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+       <h2>Admin Login!!!</h2>
       <label for="email" class="sr-only">Email address</label>
       <input type="email" id="email" name="email" class="form-control" placeholder="Email address" required="">
       <label for="password" class="sr-only">Password</label>
@@ -11,13 +12,8 @@
       <button class="btn btn-lg btn-primary btn-block" type="submit" value="login">Sign in</button>
 
     </form>
-    <form action="{{ url_for('signup') }}" class="form-signin">
-    <p>New user?</p>
-    <input class="btn btn-lg btn-primary btn-block" type="submit" name="signup" value="signup">
-    </form>
-<form action="{{ url_for('adminlogin') }}" class="form-signin">
-    <input class="btn btn-lg btn-primary btn-block" type="submit" name="Admin" value="Admin">
-    </form>
+
+
 
     <p class="mt-5 mb-3 text-muted">© 2022-2023</p>
 {% endblock %}

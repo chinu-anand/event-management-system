@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Event Management Page</title>
+</head>
+<body>
+	<header>
+		<h1>Event Management Page</h1>
+	</header>
+
+	<nav>
+		<ul>
+			<li><a href="/">Home</a></li>
+			<li><a href="#">Events</a></li>
+			<li><a href="#">Participants</a></li>
+		</ul>
+	</nav>
+
+	<main>
+		<section id="upcoming-events">
+			<h2>Upcoming Events</h2>
+			<ul>
+				{% for event in events %}
+				<li>
+					<h3>{{ event.name }}</h3>
+					<p>Date: {{ event.show_date }}</p>
+					<p>Place : {{ event.place }}</p>
+					<p>event Descripiton : {{ event.event_desc }}</p>
+					<p>Place : {{ event.place }}</p>
+					<a href="{{ url_for('booking') }}">Book Now</a>
+				</li>
+				{% endfor %}
+			</ul>
+		</section>
+	</main>
+
+	<footer>
+		<p>&copy; 2023 Event Management System</p>
+	</footer>
+</body>
+</html>

@@ -1,0 +1,43 @@
+{% extends "base.html" %} {% block title %}SignUp!{% endblock %} {% block content%}
+  <h1>New user Registration</h1>
+  <h2>Please fill in the following information:</h2>
+  <form action="{{ url_for('signup') }}" method="post">
+    <table>
+      <tr>
+        <td>
+          <label for="email">Email: </label>
+          <input type="email" placeholder="Enter Email" name="email" id="email" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="name">First Name: </label>
+          <input type="text" placeholder="First Name" name="name" id="name" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="password">Password: </label>
+          <input type="password" placeholder="Enter password" name="password" id="password" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="Confirm_password">Confirm Password: </label>
+          <input type="password" placeholder="Confirm password" name="Confirm_password" id="Confirm_password" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input type="submit" name="create" value="Create" />
+          <br>
+        </td>
+      </tr>
+    </table>
+  </form>
+<form>
+  <span> Already a user?</span>
+  <input type="submit" name ="signin" formaction="{{ url_for('index') }}" value="SignIn">
+</form>
+
+{% endblock %}
